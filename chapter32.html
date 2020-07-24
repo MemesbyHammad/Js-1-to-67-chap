@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	
+ var a = prompt("please input your name");
+     for (let i = 0; i < a.length; i++) {
+         if (a[i] == String.fromCharCode(33) || a[i] == String.fromCharCode(44) || a[0] == String.fromCharCode(44) || a[i] == String.fromCharCode(46) || a[i] == String.fromCharCode(64)) {
+             alert("please enter a valid username")
+             break
+         }
+         if(i === a.length -1){
+             alert(a)
+         }
+     }
+</script>
+</body>
+</html>
