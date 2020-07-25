@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	 var hun, fif, ten;
+ var amount = +prompt("Please enter amount for withdraw");
+ document.write("Entered withdraw amount is: " + amount + "<br><br>");
+ function currencyDenominations() {
+         hun = Math.floor(amount / 100);
+         document.write("Required notes of Rs. 100 is: " + hun + "<br><br>");
+         fif = Math.floor((amount % 100) / 50);
+         document.write("Required notes of Rs. 50 is: " + fif + "<br><br>");
+         ten = Math.floor(((amount % 100) % 50) / 10);
+         document.write("Required notes of Rs. 10 is: " + ten + "<br><br>");
+         document.write("Amount still remaining Rs: " + (((amount % 100) % 50) % 10) + "<br><br>");
+         document.write("You will have " + hun + " hundred notes " + fif + " fifty notes " + ten + " ten notes")
+     }
+     currencyDenominations();
+</script>
+</body>
+</html>
