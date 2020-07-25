@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOCUMENT</title>
+</head>
+<body>
+<br>
+<div>
+    <h1> DOM </h1>
+    <div id="form-content" class="content">
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" />
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" />
+        <label for="email">Email</label>
+        <input type="text" id="email"/>
+    </div>
+    <div id="main-content" class="content">
+        <p class="render"> First Name : Alex</p>
+        <p class="render" id="lastName">Last Name: Bank</p>
+        <p class="render"> Email : alexbank@example.com</p>
+        <p class="render"> Country : Pakistan </p>
+        <p class="render"> contact : +92 300 000000</p>
+    </div>
+</div>
+<br>
+<br>
+<h1>58-67</h1>
+</body>
+<script>
+    //Question 1
+    //Part 1
+    var mainContent=document.getElementById('form-content');
+
+    //Part 2
+    var mainNodes=mainContent.childNodes
+    console.log(mainNodes);
+
+    //Part 3
+    var elementsLength=document.getElementsByClassName('render').length;
+    for (var i=0;i<elementsLength;i++)
+    {
+        document.getElementsByClassName('render')[i].innerHTML='changed by DOM';
+    }
+
+    //Part 4
+   document.getElementById('first-name').value='Javascript Value';
+
+    //Part 5
+    document.getElementById('last-name').value='Value changed';
+    document.getElementById('email').value='Email through javascript';
+
+
+    //Question 2
+    //Part 1
+        console.log(mainContent.nodeType);  
+
+    //Part 2
+    var lastNameNodeType= document.getElementById('last-name').nodeType;
+    var lastNameChildNodes=document.getElementById('last-name').childNodes;
+    console.log(lastNameNodeType);
+    console.log(lastNameChildNodes);
+
+    //Part 3
+    var createTextNode=document.createTextNode('Replaced Value');
+    var updateNodeType=document.getElementById('last-name').innerText=createTextNode;
+    console.log(updateNodeType);
+
+    //Part 4
+    var firstChild=mainContent.firstChild;
+    var lastChild=mainContent.lastChild;
+    console.log(firstChild);
+    console.log(lastChild);
+
+    //Part 5
+    var lastNameNextSibling=document.getElementById('lastName').nextSibling;
+    var lastNamePreviousSibling=document.getElementById('lastName').previousSibling;
+    console.log(lastNameNextSibling);
+    console.log(lastNamePreviousSibling);
+
+    //Part 6
+    var emailParentNode=document.getElementById('email').parentNode;
+    var emailNodeType=document.getElementById('email').nodeType;
+    console.log(emailParentNode);
+    console.log(emailNodeType);
+</script>
+</html>
